@@ -12,19 +12,25 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_page1);
 
-        Button Conex = findViewById(R.id.buttonConex);
-        Conex.setOnClickListener(new View.OnClickListener() {
+        Button ConnexionPage1 = findViewById(R.id.buttonConexPage1);
+        Button InscripPage1 = findViewById(R.id.buttonInscriPage1);
+
+        ConnexionPage1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, MainActivity2.class);
                 startActivity(intent);
-
-                Conex.setText("hello world");
             }
-
         });
 
+        InscripPage1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(MainActivity.this, PageUn.class);
+                startActivity(intent2);
+            }
+        });
     }
 }
